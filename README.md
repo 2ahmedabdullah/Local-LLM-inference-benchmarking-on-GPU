@@ -82,6 +82,7 @@ The Lenovo LOQ 15IRX9 (Type 83DV)—uses Lenovo’s updated hyperchamber cooling
 
 
 ┌────────────────────────────┐
+                    
                      ┌──────────────┼──────────────┐
                      │                             │
                      │     Dual Super Falcon Fans  │
