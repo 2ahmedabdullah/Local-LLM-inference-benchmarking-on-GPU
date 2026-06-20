@@ -254,6 +254,7 @@ thermal conditions
 
 Inference Speed (TPS)
   ▲
+  
   │          [Optimal Points]
   │                 ★ (Fastest / Low Context)
   │                /
@@ -267,6 +268,7 @@ Inference Speed (TPS)
   │        /         ■  CRASH ZONE (OOM)       ■
   │       /          ■  (VRAM > 4.2 GB)        ■
   │      /           ■                         ■
+  
   └─────┴────────────┴─────────────────────────┴─────►
   0    1.0          4.2 (Safety Ceiling)      6.0  VRAM Used (GB)
 
