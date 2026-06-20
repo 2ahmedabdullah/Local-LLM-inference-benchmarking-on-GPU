@@ -45,6 +45,8 @@ Below is the combined performance metrics log capturing throughput alongside sys
 Skip time-series logging in the prefill phase because the mathematical time interval is too small and unstable. Prefill (TTFT) usually takes anywhere from $20\text{ms}$ to $300\text{ms}$ ($0.02$ to $0.3$ seconds). Because time-series window is configured to sample every $1$ seconds, the entire prefill phase finishes way before the very first $0.5$-second telemetry bucket can even close.
 
 
+![Time Series Data](system_performance_plot.png)
+
 Timeline
  
 Phase 1: Pipeline Start (Model Loading)
@@ -57,7 +59,7 @@ Phase 3: Decoding Phase (Token Generation Streaming)
 What happens: As each new token is generated one by one, it is appended to the KV cache, causing VRAM to creep up slightly until generation finishes.
 
 Phase 4: Cooling using Eye pads 
-By introducing the driving cooldown matrix (cool_down(target_temp=50)) and the structural stabilization window at the end of the run, one guarantee that Run #2 isn't penalized by the residual heat of Run #1. This isolates the variables completely, meaning changes in the parameters (like n_gpu_layers or kv_cache_precision) will show their true impact on performance, completely free of thermal bias.
+By introducing the driving cooldown matrix (cool_down(target_temp=50)) and the structural stabilization window at the end of the run, one guarantee that Run #2 isn't penalized by the residual heat of Run #1 too isolates the variables.
 
 Phase 5: Stabilizing Time = 5 min
 
@@ -116,8 +118,6 @@ Both dissipate heat into a shared copper heat pipe system.
 Thermal equilibrium is determined by total system power draw.
 
 Cooling system (fans + fins) responds to combined heat load.
-
-Throttling occurs when any sensor (CPU or GPU) exceeds thermal limits.
 
 
 ## 🌡️ Thermal considerations
