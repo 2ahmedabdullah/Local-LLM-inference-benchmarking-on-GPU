@@ -100,25 +100,15 @@ The Lenovo LOQ 15IRX9 (Type 83DV)—uses Lenovo’s updated hyperchamber cooling
             ┌───────────────────────┼───────────────────────┐
 
             │                       │                       │
-
             │            Radiant Heat Extraction            │
-
             │                       │                       │
-
     ┌───────┴────────┐      ┌───────┴────────┐     ┌────────┴───────┐
-
     │  Intel i7 CPU  │      │ Overlapping    │     │   NVIDIA GPU   │
-
     │   13650HX      │      │ Copper Pipes   │     │(3050/4050/4060)│
-
     │                │      │                │     │                │
-
     │  Tokenization  │      │ Shared Thermal │     │ Tensor Matrix  │
-
     │  & Prompt      │      │ Saturation Pool│     │ Compute Loop   │
-
     │  Coordination  │      │                │     │ (Kernel Exec)  │
-
     └───────▲────────┘      └───────▲────────┘     └────────▲───────┘
 
             │                       │                       │
