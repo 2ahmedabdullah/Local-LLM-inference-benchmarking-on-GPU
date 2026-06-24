@@ -13,7 +13,7 @@ Model: Qwen2.5-VL-3B
 
 Context Sizes: ctx_sizes = [65536, 32768, 16384, 8192, 4096]
 
-Model Quantization Formats: [F16, Q8_0, Q4_K_M]
+Model Quantization Formats: [Q8_0, Q4_K_M]
 
 GPU Layer Offloading Levels: [-1] -> 100% GPU Only
 
